@@ -9,15 +9,21 @@ import numpy as np
 #### Q8 b)
 
 figure, axes = plt.subplots()
-Drawing_uncolored_circle = plt.Circle((0, 0), 2, fill=False) # Drawing a circle.
 
 axes.set_aspect(1)
-axes.add_artist(Drawing_uncolored_circle)
+
+a = np.linspace(0,2*np.pi,100000)
+
+# r = 2, y' = x' = 0
+y1 = 2*np.sin(a) # y = r sin(a) + y'
+x1 = 2*np.cos(a) # x = r cos(a) + x'
+
+plt.plot(x1, y1)
 
 plt.plot([-4, 4], [-2, -2], 'b') # Tangent to thr circle (PQ)
 
 #Plotting the points
-plt.plot([0], [-2], 'o') 
+plt.plot([0], [-2], 'o')
 plt.plot([4], [-2], 'o')
 plt.plot([-4], [-2], 'o')
 plt.plot([np.sqrt(3)], [-1], 'o')
