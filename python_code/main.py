@@ -29,6 +29,7 @@ plt.plot([-4], [-2], 'o')
 plt.plot([np.sqrt(3)], [-1], 'o')
 plt.plot([np.sqrt(3)], [1], 'o')
 plt.plot([-1*np.sqrt(3)], [1], 'o')
+plt.plot([0], [0], 'o') # Center of the circle
 
 #Plotting the line segments
 plt.plot([-1*np.sqrt(3), np.sqrt(3)], [1, -1], 'b') # Line segment DB
@@ -46,6 +47,7 @@ plt.annotate('P', xy=(-4, -2.3), textcoords='data')
 plt.annotate('B', xy=(np.sqrt(3) + 0.3, -1), textcoords='data')
 plt.annotate('D', xy=(-1*np.sqrt(3) - 0.3, 1), textcoords='data')
 plt.annotate('C', xy=(np.sqrt(3) + 0.3, 1), textcoords='data')
+plt.annotate('O', xy=(0.1, 0), textcoords='data')
 
 plt.xticks(np.arange(-4, 4))
 plt.yticks(np.arange(-4, 4))
