@@ -148,7 +148,7 @@
 
 \ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{150pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{175pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
 
 	\begin{center}
@@ -208,7 +208,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{$2$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Radius}}
+	{\gnumericPB{\centering}\gnumbox{Radius, Input}}
 	&
 \\
 \hhline{|---|~}
@@ -217,7 +217,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{$(0,0)$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Center}}
+	{\gnumericPB{\centering}\gnumbox{Center, Input}}
 	&
 \\
 \hhline{|---|~}
@@ -226,7 +226,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{(-4,-2)}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Point on the tangent}}
+	{\gnumericPB{\centering}\gnumbox{Point on the tangent, Input}}
 	&
 \\
 \hhline{|---|~}
@@ -235,7 +235,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{$(4,-2)$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Point on the tangent}}
+	{\gnumericPB{\centering}\gnumbox{Point on the tangent, Input}}
 	&
 \\
 \hhline{|---|~}
@@ -244,7 +244,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{$(0,-2)$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Point of contact of the tangent}}
+	{\gnumericPB{\centering}\gnumbox{(0, $-r$), calculated}}
 	&
 \\
 \hhline{|---|~}
@@ -253,7 +253,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{$(1,-\sqrt{3})$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$(2rsin\theta cos\theta, 2rsin^{2}\theta - 2) $}}
+	{\gnumericPB{\centering}\gnumbox{$(rsin2\theta, -rcos2\theta)$ , calculated}}
 	&
 \\
 \hhline{|---|~}
@@ -262,7 +262,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{$(1,\sqrt{3})$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{(2rsin\theta cos\theta, 2-2rsin^{2}\theta)}}
+	{\gnumericPB{\centering}\gnumbox{$(rsin2\theta, rcos2\theta)$, calculated}}
 	&
 \\
 \hhline{|---|~}
@@ -271,7 +271,7 @@
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{$(-1,\sqrt{3})$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$(-2rsin\theta cos\theta, 2-2rsin^{2}\theta)$}}
+	{\gnumericPB{\centering}\gnumbox{$(-rsin2\theta, rcos2\theta)$, calculated}}
 	&
 \\
 \hhline{|-|-|-|~}
