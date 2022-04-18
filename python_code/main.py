@@ -25,46 +25,47 @@ r = 2
 theta = (np.pi)/6
 
 # The Points
-Xp = -4
-Yp = -2
-Xq = 4
-Yq = -2
-Xa = 0
-Ya = -r
-Xb = r*np.sin(2*theta)
-Yb = -r*np.cos(2*theta)
-Xc = r*np.sin(2*theta)
-Yc = r*np.cos(2*theta)
-Xd = -r*np.sin(2*theta)
-Yd = r*np.cos(2*theta)
+P = [-4,-r]
+Q = [4,-r]
+A = [0,-r]
+B = [r*np.sin(2*theta),-r*np.cos(2*theta)]
+C = [r*np.sin(2*theta), r*np.cos(2*theta)]
+D = [-r*np.sin(2*theta), r*np.cos(2*theta)]
+
+def plot_point(P):
+    plt.plot(P[0], P[1], marker = 'o')
+
+def plot_line_segment(P1, P2):
+    plt.plot([P1[0], P2[0]], [P1[1], P2[1]], 'b')
+
+def mark_point(P, lab):
+    plt.annotate(lab, xy=(P[0] - 0.3, P[1] + 0.3), textcoords='data')
 
 #Plotting the points
-plt.plot(Xa, Ya, 'o')
-plt.plot(Xb, Yb, 'o')
-plt.plot(Xc, Yc, 'o')
-plt.plot(Xd, Yd, 'o')
-plt.plot(Xp, Yp, 'o')
-plt.plot(Xq, Yq, 'o')
+plot_point(A)
+plot_point(B)
+plot_point(C)
+plot_point(D)
+plot_point(P)
+plot_point(Q)
 plt.plot([0], [0], 'o') # Center of the circle
 
 #Plotting the line segments
-plt.plot([Xp, Xq], [Yp, Yq], 'b') # Tangent to thr circle (PQ)
-plt.plot([Xd, Xb], [Yd, Yb], 'b') # Line segment DB
-plt.plot([Xd, Xa], [Yd, Ya], 'b') # Line segment DA
-plt.plot([Xb, Xa], [Yb, Ya], 'b') # Line segment BA
-plt.plot([Xa, Xc], [Ya, Yc], 'b') # Line segment AC
-plt.plot([Xd, Xc], [Yd, Yc], 'b') # Line segment DC
-plt.plot([Xb, Xc], [Yb, Yc], 'b') # Line segment BC
-
+plot_line_segment(P, Q) # Tangent to thr circle (PQ)
+plot_line_segment(D, B) # Line segment DB
+plot_line_segment(D, A) # Line segment DA
+plot_line_segment(B, A) # Line segment BA
+plot_line_segment(C, A) # Line segment AC
+plot_line_segment(D, C) # Line segment DC
+plot_line_segment(B, C) # Line segment BC
 
 # Labelling the points, put a small offset so that the labels are not overlapping.
-plt.annotate('A', xy=(0, Ya-0.3), textcoords='data')
-plt.annotate('Q', xy=(Xq, Yq-0.3), textcoords='data')
-plt.annotate('P', xy=(Xp, Yp-0.3), textcoords='data')
-plt.annotate('B', xy=(Xb + 0.3, Yb), textcoords='data')
-plt.annotate('D', xy=(Xd - 0.3, Yd), textcoords='data')
-plt.annotate('C', xy=(Xc + 0.3, Yc), textcoords='data')
-plt.annotate('O', xy=(0.1, 0), textcoords='data')
+mark_point(A, 'A')
+mark_point(B, 'B')
+mark_point(C, 'C')
+mark_point(D, 'D')
+mark_point(P, 'P')
+mark_point(Q, 'Q')
 
 plt.xticks(np.arange(-4, 4))
 plt.yticks(np.arange(-4, 4))
